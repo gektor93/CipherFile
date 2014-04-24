@@ -1,0 +1,10 @@
+C:\Users\Gektor\Documents\Visual Studio 2010\Projects\Server\Server\bin\Debug\Server.exe
+C:\Users\Gektor\Documents\Visual Studio 2010\Projects\Server\Server\bin\Debug\Server.pdb
+C:\Users\Gektor\Documents\Visual Studio 2010\Projects\Server\Server\obj\x86\Debug\Server.exe
+C:\Users\Gektor\Documents\Visual Studio 2010\Projects\Server\Server\obj\x86\Debug\Server.pdb
+C:\Users\Gektor\Documents\Visual Studio 2010\Projects\Server\Server\obj\x86\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Gektor\Documents\Visual Studio 2010\Projects\Мисс ЗИна\Мисс ЗИна\Server\Server\obj\x86\Debug\Server.exe
+C:\Users\Gektor\Documents\Visual Studio 2010\Projects\Мисс ЗИна\Мисс ЗИна\Server\Server\obj\x86\Debug\Server.pdb
+C:\Users\Gektor\Documents\Visual Studio 2010\Projects\Мисс ЗИна\Мисс ЗИна\Server\Server\bin\Debug\Server.exe
+C:\Users\Gektor\Documents\Visual Studio 2010\Projects\Мисс ЗИна\Мисс ЗИна\Server\Server\bin\Debug\Server.pdb
+C:\Users\Gektor\Documents\Visual Studio 2010\Projects\Мисс ЗИна\Мисс ЗИна\Server\Server\obj\x86\Debug\Server.csprojResolveAssemblyReference.cache

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -36,9 +36,11 @@ public class SynchronousSocketListener
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(2048);
             string rsaKey = rsa.ToXmlString(true);
             File.WriteAllText("c:\\private.txt", rsaKey);
-            Console.Write("Ключи RSA были успешно сгенерированы и сохранены.");            
+            Console.Write("Ключи RSA были успешно сгенерированы и сохранены.\n\n");            
         }
-        else
+        Console.Write("\"gen\" - Генерировать RSA ключи\n\"enc\" - Выбрать файл для шифрования и отправки\n");
+        answer = Console.ReadLine();
+        if (answer == "enc")
         {
             // Bind the socket to the local endpoint and 
             // listen for incoming connections.
@@ -50,7 +52,7 @@ public class SynchronousSocketListener
                 // Start listening for connections.
                 while (true)
                 {
-                    Console.WriteLine("Waiting for a connection...");
+                    Console.WriteLine("Ожидание соединения...");
                     // Program is suspended while waiting for an incoming connection.
                     Socket handler = listener.Accept();
                     data = null;
@@ -88,10 +90,10 @@ public class SynchronousSocketListener
                         data = Encoding.UTF8.GetString(bytes, 0, bytesRec);
                         if (data.IndexOf("Ключ") > -1)
                         {
-                            Console.Write("Ключ был успешно отправлен!\n");
+                            Console.Write("\nКлюч был успешно отправлен!\n");
                             byte[] encMes = EncryptFile(dlg.FileName, aesKey);
                             handler.Send(encMes);
-                            Console.Write("Файл был успешно зашифрован и отправлен!\n");
+                            Console.Write("\nФайл был успешно зашифрован и отправлен!\n");
                             handler.Shutdown(SocketShutdown.Both);
                             handler.Close();
                             break;
@@ -108,7 +110,7 @@ public class SynchronousSocketListener
             }
 
         }
-        Console.WriteLine("\nPress ENTER to continue...");
+        Console.WriteLine("\nНажмите Enter для продолжения\n");
         Console.Read();
 
     }
